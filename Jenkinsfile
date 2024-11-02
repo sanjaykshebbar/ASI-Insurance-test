@@ -14,7 +14,7 @@ pipeline {
         stage('Run Ansible Playbook') {
             steps {
                 ansiblePlaybook playbook: 'ansible-playbook.yml', 
-                                inventory: 'hosts', 
+                                inventory: './hosts', 
                                 credentialsId: 'ansible-ssh-key'
             }
         }
